@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    color-scheme: light;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-feature-settings: "ss01" on;
+    --accent: #4f76ff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply min-h-screen bg-slate-50 text-slate-900 antialiased transition-colors duration-300;
+}
+
+.dark body {
+    @apply bg-slate-950 text-slate-100;
+}
+
+::selection {
+    background: rgba(79, 118, 255, 0.18);
+}
+
+.alert-wrapper {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1100;
+    width: min(95vw, 360px);
+}
